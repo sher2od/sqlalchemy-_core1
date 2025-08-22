@@ -16,3 +16,7 @@ DATABASE_URL = URL.create(
 engine = create_engine(DATABASE_URL)
 
 metadata_odj = MetaData()
+
+
+def get_connection():
+    return engine.connect()
